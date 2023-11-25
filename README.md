@@ -3,7 +3,7 @@
 
 Para utilizar o Amazing Aline, um site dedicado a consultas de voos, é necessário ter um banco de dados MySQL configurado conforme as tabelas especificadas abaixo. Certifique-se de criar o banco de dados amazing e as seguintes tabelas:
 
-# Tabela Clientes </br>
+<h1>Tabela Clientes </h1> </br>
 CREATE TABLE cliente (
   idUser INT PRIMARY KEY AUTO_INCREMENT,
   nome VARCHAR(50),
@@ -14,7 +14,7 @@ CREATE TABLE cliente (
   senha VARCHAR(50)
 );
 
-# Tabela Companhia</br>
+<h1>Tabela Companhia</h1></br>
 
 CREATE TABLE Companhia (
   idComp INT PRIMARY KEY AUTO_INCREMENT,
@@ -22,10 +22,10 @@ CREATE TABLE Companhia (
   email VARCHAR(50),
   cnpj VARCHAR(20),
   senha VARCHAR(20)
-);
+); </br>
 
 
-# Tabela Passagem </br>
+<h1>Tabela Passagem</h1> </br>
 
 CREATE TABLE passagem (
   idPassagem INT PRIMARY KEY AUTO_INCREMENT,
@@ -41,9 +41,9 @@ CREATE TABLE passagem (
   bebe INT,
   duracao INT, 
   valor DOUBLE
-);
+); </br>
 
-# Tabela Voos </br>
+<h1>Tabela Voos</h1> </br>
 CREATE TABLE voos (
   localDeSaida VARCHAR(25),
   diaDeSaida VARCHAR(10),
