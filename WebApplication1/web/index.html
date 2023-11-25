@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d1eefe; /* Alteração da cor de fundo */
+    }
+
+    .login {
+      max-width: 400px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .overlap {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .ellipse {
+      width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .frame {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      background-color: #082929; /* Alteração da cor do botão */
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #082929;
+    }
+
+    .novo-por-aqui {
+      margin-top: 20px;
+    }
+
+    .span {
+      color: #333;
+    }
+
+    .text-wrapper-3 a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .uma-companhia-clique {
+      margin-top: 10px;
+    }
+
+    .text-wrapper-3 a {
+      color: #3498db;
+      text-decoration: none;
+    }
+
+    .text-wrapper-4 {
+      color: #082929;
+      font-size: 24px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  
+    <form method="post" action="login.jsp">
+    
+    <div class="login">
+      <div class="overlap">
+          <h1>Amazing Aline</h1>
+          <img class="img" src="7893979.png" width="50px" /><br>
+          
+        <div class="text-wrapper-4">Login</div>
+      </div>
+      <div class="frame">
+        <div class=""><input type="text" name="email" class="overlap-group" placeholder="Email:" required></div>
+        <div class=""><input class="div-wrapper" name="senha" type="password" placeholder="Senha:" required></div>
+        <div class=""><input class="overlap-2" type="submit" value="Entrar"></div>
+        <p class="novo-por-aqui">
+          <span class="span">Novo por aqui?</span>
+          <span class="text-wrapper-3"><a href="html/cadcli.html">Cadastre-se</a></span>
+          <span class="span"> agora!</span>
+        </p>
+        <p class="uma-companhia-clique">
+          <span class="span">É uma companhia? </span>
+          <span class="text-wrapper-3"><a href="Login Companhia.html">Clique aqui!</a></span>
+        </p>
+      </div>
+    </div>
+  </form>
+</body>
+</html>

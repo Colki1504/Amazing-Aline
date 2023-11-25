@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #d1eefe; /* Alteração da cor de fundo */
+    }
+  
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center; 
+    }
+  
+    .header {
+      background-color: #082929;;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      font-size: 24px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+  
+    .button {
+      background-color: #082929; /* Alteração da cor do botão */
+      color: #fff;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+  
+    .button:hover {
+      background-color: #082929;;
+    }
+  
+    .form {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    input, label, button {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+  
+    .date-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+  
+    #includeHotel {
+      margin-right: 5px;
+    }
+  
+    .submit-button {
+      background-color: #2ecc71;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  
+    .submit-button:hover {
+      background-color: #27ae60;
+    }
+    .botoes{
+      justify-content: space-between;
+    }
+  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Voos</title>
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div>Cliente</div>
+  </div>
+  <button class="button" onclick="abrirPagina('vooUser.html')">Voo</button>
+  <button class="button" onclick="abrirPagina('inicioUser.html')">Inicial</button>
+  <button class="button" onclick="abrirPagina('pacoteUser.html')">Pacotes</button>
+  <form method="post" action="#" class="form">
+    <input type="text" placeholder="Local de saída">
+    <input type="text" placeholder="Local de entrada">
+    <input type="text" placeholder="Duração de viagem">
+    <input type="text" placeholder="Valor da passagem">
+    <div class="date-container">
+      <div>
+        <div>Dia:</div>
+        <input type="date" name="data">
+      </div>
+      <div>
+        <div>Horário:</div>
+        <input type="time" name="hora">
+      </div>
+    </div>
+
+
+    <button type="submit" class="submit-button">Cadastrar</button>
+  </form>
+</div>
+
+<script>
+  function abrirPagina(pagina) {
+    window.location.href = pagina;
+  }
+</script>
+
+</body>
+</html>

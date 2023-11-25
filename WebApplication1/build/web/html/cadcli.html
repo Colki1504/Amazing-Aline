@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #d1eefe; /* Alteração da cor de fundo */
+}
+
+.cadastro-user {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.overlap-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.fundo {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.overlap-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.ellipse {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.rectangle {
+  width: 100%;
+  height: 100%;
+  background-color: #082929;
+  border-radius: 8px;
+}
+
+.div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.dados {
+  display: flex;
+  flex-direction: column;
+}
+
+.div-wrapper input {
+  margin-bottom: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.text-wrapper-2 {
+  color: #082929;
+  font-size: 24px;
+  margin-top: 20px;
+}
+.div-wrapper input[type="submit"] {
+  background-color: #082929;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.div-wrapper input[type="submit"]:hover {
+  background-color: #064040;
+}
+  </style>
+
+</head>
+<body>
+<script>
+  // Detecta se o dispositivo é um desktop ou notebook
+  //const isDesktop = navigator.userAgent.match(/(Windows|Linux|Mac)/i);
+
+  // Se o dispositivo for um desktop ou notebook, redireciona para uma página de erro
+  if (isDesktop) {
+    window.location.href = "/error.html";
+  }
+</script>
+<form method="post" action="cadcli.jsp">
+  <div class="cadastro-user">
+    <div class="overlap-wrapper">
+      <div class="overlap">
+        <div class="fundo">
+          <div class="overlap-group">
+            <div class="ellipse"></div>
+            <div class="rectangle"></div>
+            <div class="div"></div>
+          </div>
+        </div>
+        <div class="dados">
+          <div class="overlap">
+              <img class="img" src="../7893979.png" width="50px" /><br>
+          </div>
+          <div class="text-wrapper-2">Cadastro</div>
+          <div class="div-wrapper"><input type="text" name="email" class="overlap-3" placeholder="Email:" required></div>
+           <div class="div-wrapper"><input type="text" name="nome" class="overlap-3" placeholder="Nome:" required></div>
+          <div class="div-wrapper"><input type="text" name="cpf" class="overlap-4" placeholder="CPF:" required></div>
+          <div class="div-wrapper"><input type="text" name="cidade"class="overlap-5" placeholder="Cidade:" required></div>
+          <div class="div-wrapper"><input type="text" name="uf"class="overlap-6" placeholder="UF:" required></div>
+          <div class="div-wrapper"><input type="text" name="passaporte" class="overlap-7" placeholder="Passaporte"></div>
+          <div class="div-wrapper"><input type="text" name="senha" class="overlap-8" placeholder="Senha:" required></div>
+          <div class="div-wrapper"><input type="text" name="" class="overlap-9" placeholder="Repetir senha:" required></div>
+          <div class="div-wrapper"><input type="submit" class="div-wrapper"   ></div>
+          <span class="span">Já tem um conta?</span>
+          <span class="text-wrapper-3"><a href="../index.html">clique aqui</a></span>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
+</body>
+</html>
