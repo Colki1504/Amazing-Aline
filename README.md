@@ -2,7 +2,7 @@
 
 
 Para utilizar o Amazing Aline, um site dedicado a consultas de voos, é necessário ter um banco de dados MySQL configurado conforme as tabelas especificadas abaixo. Certifique-se de criar o banco de dados amazing e as seguintes tabelas:
-![Logo do R]([http://developer.r-project.org/Logo/Rlogo-5.png](https://media.discordapp.net/attachments/741868910865023060/1179070870480760923/zyro-image.png?ex=65787251&is=6565fd51&hm=bb69c0bad986829522cfef51c3665267a88bef28b19548d6125bab8bfb6a17ac&=&format=webp&quality=lossless&width=625&height=625))
+
 <h1>Tabela Clientes </h1> </br>
 CREATE TABLE cliente ( </br>
   idUser INT PRIMARY KEY AUTO_INCREMENT, </br>
