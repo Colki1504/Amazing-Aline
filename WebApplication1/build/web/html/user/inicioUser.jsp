@@ -193,7 +193,10 @@ a:hover {
           <td><% out.print(lista.get(num).getBebe() + "<br>"); %></td>
           <td><% out.print("R$:"+lista.get(num).getValor() + "<br>"); %></td>
           
-          <%
+          
+
+        </tr> <br><td class=""> <button class="buy-button">Comprar</button> </td>
+                 <%
           
             }
         
@@ -202,10 +205,8 @@ a:hover {
         catch(Exception e){}
           
           %>
-        </tr> <br>
-        <!-- Adicione mais linhas conforme necessário -->
       </tbody>
-      <td> <button class="buy-button">Comprar</button> </td>
+      
     </table>
         <h1>Tabela de Voos</h1>
         <table>
@@ -219,6 +220,7 @@ a:hover {
           <th>Comprar</th>
         </tr>
       </thead>
+      
       <tbody>
         <!-- Adicione linhas conforme necessário -->
                           <%

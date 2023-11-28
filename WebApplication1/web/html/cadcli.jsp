@@ -20,6 +20,7 @@
             UserMVC cliente = new UserMVC();
             cliente.setNome(request.getParameter("nome"));
             cliente.setEmail(request.getParameter("email"));
+            cliente.setCidade(request.getParameter("cidade"));
             cliente.setCpf(request.getParameter("cpf"));
             cliente.setPassaporte("passaporte");
             cliente.setSenha("senha");

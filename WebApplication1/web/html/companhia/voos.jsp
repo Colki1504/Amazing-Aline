@@ -30,8 +30,7 @@
         
         Create create = new Create();
         create.cadastrarVoos(voos);
-        
         %>
-        
+        <script> window.location.href='TLCadastroSucesso.html'; </script>
     </body>
 </html>

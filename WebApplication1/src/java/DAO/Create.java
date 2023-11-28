@@ -61,21 +61,25 @@ public class Create {
    
    public void cadastrarPacotes(PassagemMVC passagem){
    
-       String sql = "insert into passagem(localDeSaida,diaDeSaida,horarioDeSaida,localDeChegada,localDeEntrada,adulto,crianca,bebe,duracao,valor)"
-               + "values(?,?,?,?,?,?,?,?,?,?);";
+       String sql = "insert into passagem(localDeSaida,diaDeSaida,diaDeChegada,horarioDeSaida,horarioDechegada,localDeChegada,localDeEntrada,"
+               + "adulto,crianca,bebe,duracao,valor) "
+               + "values(?,?,?,?,?,?,?,?,?,?,?,?);";
         con = (Connection) new ConectaBD().conexaoBD();
         try{
         pstm = (PreparedStatement) con.prepareStatement(sql);
         pstm.setString(1,passagem.getLocalSaida());
         pstm.setString(2,passagem.getDiaSaida());
-        pstm.setString(3,passagem.getHoraSaida());
-        pstm.setString(4,passagem.getLocalChegada());
-        pstm.setString(5,passagem.getDiaChegada());
-        pstm.setString(6,passagem.getHorachegada());
+        pstm.setString(3, passagem.getDiaChegada());
+        pstm.setString(4,passagem.getHoraSaida());
+        pstm.setString(5,passagem.getHorachegada());
+        pstm.setString(6,passagem.getLocalChegada());
         pstm.setString(7,passagem.getLocalEntrada());
         pstm.setInt(8,passagem.getAdulto());
         pstm.setInt(9,passagem.getCrianca());
         pstm.setInt(10,passagem.getBebe());
+        pstm.setInt(11,passagem.getDuracao());
+        pstm.setDouble(12,passagem.getValor());
+        
         
         pstm.execute();
         pstm.close();

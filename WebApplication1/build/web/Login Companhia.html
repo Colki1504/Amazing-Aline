@@ -32,12 +32,6 @@
       border-radius: 50%;
     }
 
-    .img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
 
     .frame {
       display: flex;
@@ -92,6 +86,18 @@
       font-size: 24px;
       margin-top: 20px;
     }
+        h1 {
+    color: #082929; /* Cor verde */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte */
+    font-size: 30px; /* Tamanho da fonte */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+    margin-top: -10px;
+    padding: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra de texto */
+    background-color: #ecf0f1; /* Cor de fundo */
+    border-radius: 8px; /* Borda arredondada */
+    display: inline-block; /* Para que o fundo envolva o texto */
+}
   </style>
 </head>
 <body>
@@ -100,11 +106,11 @@
     
     <div class="login">
       <div class="overlap">
-        <img class="img" src="7893979.png" width="50px" /><br>
-        <div class="text-wrapper-4">Login</div>
+        <img class="img" src="html/img/zyro-image.png" width="150px" /><br>
+        <div class="text-wrapper-4"><h1>Login - Companhia</h1></div>
       </div>
       <div class="frame">
-          <div class=""><input class="div-wrapper" type="password" placeholder="Senha:" required></div>
+          <div class=""><input type="text" name="email" class="overlap-group" placeholder="Email:" required></div>
         <div class=""><input class="div-wrapper" type="password" placeholder="Senha:" required></div>
         <div class=""><input class="overlap-2" type="submit" value="Entrar"></div>
         <p class="novo-por-aqui">
@@ -114,7 +120,7 @@
         </p>
         <p class="uma-companhia-clique">
           <span class="span">É uma cliente? </span>
-          <span class="text-wrapper-3"><a href="Login.html">Clique aqui!</a></span>
+          <span class="text-wrapper-3"><a href="index.html">Clique aqui!</a></span>
         </p>
         
       </div>

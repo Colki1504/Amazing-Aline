@@ -33,6 +33,7 @@ public ArrayList<VoosMVC> pesquisarVoos(){
         rs = pstm.executeQuery(sql);
         while(rs.next()){
         VoosMVC voos = new VoosMVC();
+        voos.setIdVoos(rs.getInt("idVoos"));
         voos.setLocalDeSaida(rs.getString("localDeSaida"));
         voos.setLocalChegada(rs.getString("localDeChegada"));
         voos.setDiaSaida(rs.getString("diaDeSaida"));

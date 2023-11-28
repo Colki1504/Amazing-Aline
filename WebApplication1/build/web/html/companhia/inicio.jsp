@@ -205,14 +205,14 @@ a:hover {
   </div>
     
     
-    <form method="post" action="delete.jsp" class="form">
+    <div class="form">
 
-      <h1>Tabela de Pacotes</h1>
+    <h1>Tabela de Pacotes</h1>
     <table>
       <thead>
         <tr>
-          <th>Local da Saida</th>
-          <th>Hora Saidda</th>
+          <th>Dia de Saida</th>
+          <th>Hora Saida</th>
           <th>Destino</th>
           <th>Hora Chegada</th>
           <th>Dia Chegada</th>
@@ -252,7 +252,10 @@ a:hover {
         </tr> <br>
         <!-- Adicione mais linhas conforme necessário -->
       </tbody>
-      <td> <a href="delete.jsp"><button>Deletar</button></a> </td>
+      <td> <% out.print("<a href='delete.jsp?id="+lista.get(num).getIdPassagem()+
+              "&localSaida="+lista.get(num).getLocalSaida()+
+              "&localChegada="+ lista.get(num).getLocalChegada()+
+              "&valor="+ lista.get(num).getValor()+"'><button>Deletar</button></a> "); %></td>
       
                 <%
           
@@ -264,7 +267,7 @@ a:hover {
           
           %>
     </table>
-  <form method="post" action="#" class="form">
+
 <h1>Tabela de Voos</h1>
         <table>
       <thead>
@@ -288,12 +291,16 @@ a:hover {
         
         for(int num = 0; num < listaVoos.size(); num++){
         %>
-        <tr>
+        <tr> 
           <td> <%out.print(listaVoos.get(num).getLocalChegada());%> </td>
           <td> <%out.print( listaVoos.get(num).getLocalDeSaida());%> </td>
           <td> <%out.print(listaVoos.get(num).getDuraca());%>Min</td>
           <td> <%out.print(listaVoos.get(num).getLocalChegada());%> </td>
-          <td> <a href="delete.jsp"><button>Deletar</button></a> </td>
+          <td> <% out.print("<a href='deleteVos.jsp?id="+ listaVoos.get(num).getIdVoos() +
+                  "&localdeSaida="+ listaVoos.get(num).getLocalDeSaida()+
+                  "&horadeSaida="+listaVoos.get(num).getHoraSaida()+
+                  "&duraca="+listaVoos.get(num).getDuraca()+
+                  "&localChegada="+listaVoos.get(num).getLocalChegada()+"&valor="+listaVoos.get(num).getValor()+"&destino="+ listaVoos.get(num).getLocalChegada()+"'><button>Deletar</button></a> "); %></td>
         </tr>
         <%        
 
@@ -308,7 +315,8 @@ a:hover {
         <!-- Adicione mais linhas conforme necessário -->
       </tbody>
     </table>
-  </form>
+
+</div>
 </div>
 
 <script>

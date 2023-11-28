@@ -10,8 +10,16 @@ package MVC;
  */
 public class VoosMVC {
     String localChegada,diaSaida,horaSaida,localDeSaida;
-    
+    int idVoos;
 
+    public int getIdVoos() {
+        return idVoos;
+    }
+
+    public void setIdVoos(int idVoos) {
+        this.idVoos = idVoos;
+    }
+    
     public String getLocalDeSaida() {
         return localDeSaida;
     }

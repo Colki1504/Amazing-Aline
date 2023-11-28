@@ -1,190 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-     table {
+    <title>Cadastro de Voos</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d1eefe;
+        }
 
-margin: 20px;
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
 
-}
-    body {
-      font-family: 'Arial', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #d1eefe; /* Alteração da cor de fundo */
-    }
-  
-    .container {
-      max-width: 800px;
-      margin: 20px auto;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
-  
-    .header {
-      background-color: #082929;;
-      color: #fff;
-      padding: 10px;
-      text-align: center;
-      font-size: 24px;
-      border-radius: 4px;
-      margin-bottom: 20px;
-    }
-  
-    .button {
-      background-color: #082929; /* Alteração da cor do botão */
-      color: #fff;
-      padding: 10px 15px;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      margin-right: 10px;
-    }
-  
-    .button:hover {
-      background-color: #082929;;
-    }
-  
-    .form {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    input, label, button {
-      margin-bottom: 10px;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
-  
-    .date-container {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-  
-    #includeHotel {
-      margin-right: 5px;
-    }
-  
-    .submit-button {
-      background-color: #2ecc71;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      padding: 10px;
-      cursor: pointer;
-    }
-  
-    .submit-button:hover {
-      background-color: #27ae60;
-    }
-  </style>
+        .header {
+            background-color: #082929;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            font-size: 24px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
 
+        .button {
+            background-color: #082929;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
 
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro de Voos</title>
+        .button:hover {
+            background-color: #082929;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input,
+        label,
+        button {
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .date-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .submit-button {
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #27ae60;
+        }
+    </style>
 </head>
+
 <body>
-
-<div class="container">
-  <div class="header">
-    <div>Companhia</div>
-  </div>
-  <button class="button" onclick="abrirPagina('voo.html')">Voo</button>
-  <button class="button" onclick="abrirPagina('inicio.jsp')">Inicial</button>
-  <button class="button" onclick="abrirPagina('pacote.html')">Pacotes</button>
-  <form method="post" action="pacote.jsp" class="form">
-
-    <div class="header">Cadastro de Voos</div>
-
-    <div class="form-group">
-        <input type="text" name="localDeSaida" placeholder="Local de saída">
-        <div class="overlap-10">
-            <div class="text-wrapper-8">Dia de Saída:</div>
-            <input type="text" name="diaDeSaida" placeholder="00/00/0000">
+    <div class="container">
+        <div class="header">
+            <div>Companhia</div>
         </div>
-        <div class="overlap-12">
-            <div class="text-wrapper-9">Horário de Saída:</div>
-            <input type="text" name="horaDeSaida" placeholder="00:00H">
-        </div>
+        <button class="button" onclick="abrirPagina('voo.html')">Voo</button>
+        <button class="button" onclick="abrirPagina('inicio.jsp')">Inicial</button>
+        <button class="button" onclick="abrirPagina('pacote.html')">Pacotes</button>
+        <form method="post" action="pacote.jsp" class="form">
+            <div class="header">Cadastro de Voos</div>
+
+            <div class="form-group">
+                <label>Local de saída:</label>
+                <input type="text" name="localDeSaida" placeholder="Local de saída">
+                <div class="overlap-10">
+                    <label>Dia de Saída:</label>
+                    <input type="text" name="diaDeSaida" placeholder="00/00/0000">
+                </div>
+                <div class="overlap-12">
+                    <label>Horário de Saída:</label>
+                    <input type="text" name="horaDeSaida" placeholder="00:00H">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Destino:</label>
+                <input type="text" name="localDeChegada" placeholder="Destino">
+                <div class="overlap-10">
+                    <label>Dia de chegada:</label>
+                    <input type="text" name="diaDeChegada" placeholder="00/00/0000">
+                </div>
+                <div class="overlap-12">
+                    <label>Horário de chegada:</label>
+                    <input type="text" name="horarioDeChegada" placeholder="00:00H">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Local de entrada:</label>
+                <input type="text" name="localEntrada" placeholder="Local de entrada">
+            </div>
+
+            <div class="form-group">
+                <label>Adulto:</label>
+                <input type="text" name="adulto" placeholder="Quantidade adulto">
+                <label>Criança:</label>
+                <input type="text" name="crianca" placeholder="Quantidade criança">
+                <label>Bebê:</label>
+                <input type="text" name="bebe" placeholder="Quantidade bebê">
+            </div>
+
+            <div class="form-group">
+                <label>Duração de viagem:</label>
+                <input type="text" name="duracao" placeholder="Duração de viagem">
+            </div>
+
+            <div class="form-group">
+                <label>Valor da passagem:</label>
+                <input type="text" name="valor" placeholder="Valor da passagem">
+            </div>
+
+            <button type="submit" class="submit-button">Cadastrar</button>
+        </form>
     </div>
 
-    <div class="form-group">
-        <div class="text-wrapper-8">Destino:</div>
-        <input type="text" name="localDeChegada" placeholder="Destino">
-        <div class="overlap-10">
-            <div class="text-wrapper-8">Dia de chegada:</div>
-            <input type="text" name="diaDeChegada" placeholder="00/00/0000">
-        </div>
-        <div class="overlap-12">
-            <div class="text-wrapper-9">Horário de chegada:</div>
-            <input type="text" name="horarioDeChegada" placeholder="00:00H">
-        </div>
-    </div>
-
-    <div class="form-group">
-        <div class="text-wrapper-8">Local de entrada:</div>
-        <input type="text" name="localEntrada" placeholder="Local de entrada">
-    </div>
-
-    <div class="form-group">
-        <div>Adulto: <input type="text" name="adulto" placeholder="Quantidade adulto"></div>
-        <div>Criança: <input type="text" name="crianca" placeholder="Quantidade criança"></div>
-        <div>Bebê: <input type="text" name="bebe" placeholder="Quantidade bebê"></div>
-    </div>
-
-    <div class="form-group">
-        <input type="text" name="duracao" placeholder="Duração de viagem">
-    </div>
-
-    <div class="form-group">
-        <input type="text" name="valor" placeholder="Valor da passagem">
-    </div>
-
-    <button type="submit" class="submit-button">Cadastrar</button>
-</form>
-</div>
-
-
-<script>
-  function abrirPagina(pagina) {
-    window.location.href = pagina;
-  }
-
-  
-  
-</script>
-<script>
-  let formCima = {
-    aberto: false,
-    fechado: false
-};
-
-function abrirFecharCima() {
-    formCima.aberto = !formCima.aberto;
-    formCima.fechado = !formCima.fechado;
-}
-
-function verificarEstadoCima() {
-    return formCima.aberto && formCima.fechado;
-}
-
-document.getElementById('formularioDeBaixo').addEventListener('submit', function(event) {
-    if (!verificarEstadoCima()) {
-        event.preventDefault(); // Previne o envio do formulário de baixo
-    }
-});
-</script>
-
-</script>
+    <script>
+        function abrirPagina(pagina) {
+            window.location.href = pagina;
+        }
+    </script>
 </body>
+
 </html>

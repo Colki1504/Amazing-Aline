@@ -52,17 +52,28 @@
       margin: 10px;
     }
 
-    .form {
-      display: flex;
-      flex-direction: column;
-      margin-top: 20px;
-    }
+    form {
+            max-width: 600px; /* Ajuste conforme necessário */
+            margin: 0 auto;
+        }
 
-    label {
-      font-weight: bold;
-      margin-bottom: 5px;
-    }
+        label {
+            display: inline-block;
+            width: 150px; /* Largura fixa para os rótulos, ajuste conforme necessário */
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
 
+        input, select {
+            width: 100%; /* Preencher toda a largura disponível */
+            border-radius: 30px;
+            padding: 15px;
+
+            box-sizing: border-box; /* Inclui a largura da borda e do preenchimento no cálculo da largura */
+            margin-bottom: 8px;
+        }
+
+        
     .info {
       margin-bottom: 10px;
     }
@@ -74,6 +85,7 @@
       border: none;
       border-radius: 4px;
       cursor: pointer;
+      width: 100%;
     }
 
     .delete-button:hover {
@@ -85,78 +97,52 @@
   <title>Excluir Voo</title>
 </head>
 <body>
+    <form method="post" action="deletar/deletePassagem.jsp">
+    <div class="container">
+      <div class="header">
+        <div>Companhia - Excluir Pacote</div>
+      </div>
+      <div class="botoes">
+        <button class="button" onclick="abrirPagina('inicio.jsp')">Inicial</button>
+      </div>
+        <form>
+      <div class="form">
+          <div>
+        <label for="localSaida">Id do Pacote:</label>
 
-<div class="container">
-  <div class="header">
-    <div>Companhia - Excluir Voo</div>
-  </div>
-  <div class="botoes">
-    <button class="button" onclick="abrirPagina('inicio.jsp')">Inicial</button>
-  </div>
-                  <%
-          
-        try{
-            
-        Read read = new Read();
-        ArrayList<PassagemMVC> lista = read.pesquisarPassagem();
-        
-        for(int num = 0; num < lista.size(); num++){
-            
-      %>
-  <div class="form">
-    <label for="localSaida">Local de Saída:</label>
-    <div class="info" id="localSaida"><% out.print(lista.get(num).getLocalSaida() + "<br>"); %></div>
+        <input type="type" name="id"  value="<%=request.getParameter("id")%>">
+        </div>
 
-    <label for="horaSaida">Hora de Saída:</label>
-    <div class="info" id="horaSaida"><% out.print(lista.get(num).getHoraSaida() + "<br>"); %></div>
+        <div>
+        <label for="localSaida">Local de saída:</label>
+        <input type="type" name="nome" class="overlap-group" value="<%=request.getParameter("localSaida")%>">
+        </div>
 
-    <label for="destino">Destino:</label>
-    <div class="info" id="destino">São paulo</div>
+        <div>
+            <label for="horaSaida">Local de chegada:</label>
+        <input type="type" name="horadeSaida"  
+               value=" <%=request.getParameter("localChegada")%>"> 
+        </div>
 
-    <label for="horaChegada">Hora de Chegada:</label>
-    <div class="info" id="horaChegada">16:00</div>
+        <div>
+            <label for="valor">Valor:</label>
+        <input type="type" name="id"  value="<%=request.getParameter("valor")%>">
+        </div>
 
-    <label for="diaChegada">Dia de Chegada:</label>
-    <div class="info" id="diaChegada">15/04/2004</div>
 
-    <label for="localEntrada">Local de Entrada:</label>
-    <div class="info" id="localEntrada"><% out.print(lista.get(num).getLocalEntrada() + "<br>"); %></div>
 
-    <label for="adulto">Número de Adultos:</label>
-    <div class="info" id="adulto"><% out.print(lista.get(num).getAdulto() + "<br>"); %></div>
 
-    <label for="crianca">Número de Crianças:</label>
-    <div class="info" id="crianca"><% out.print(lista.get(num).getCrianca() + "<br>"); %></div>
+        <button class="delete-button" >Delete</button>
 
-    <label for="bebe">Número de Bebês:</label>
-    <div class="info" id="bebe"><% out.print(lista.get(num).getBebe() + "<br>"); %></div>
-
-    <label for="valor">Valor:</label>
-    <div class="info" id="valor"><% out.print("R$:"+lista.get(num).getValor() + "<br>"); %></div>
-            <%        
-
-            }
-        
-        
-            }
-        catch(Exception e){}
-        
-        %>
-    
-    <button class="delete-button" onclick="deleteVoo()">Delete</button>
-  </div>
-</div>
-
+      </div>
+    </div>
+</form>
 <script>
   function abrirPagina(pagina) {
     window.location.href = pagina;
   }
 
-  function deleteVoo() {
-    // Adicione aqui o código para realizar a exclusão do voo
-    alert('Voo excluído com sucesso!');
-    abrirPagina('inicio.jsp'); // Redireciona para a página inicial após a exclusão (pode ajustar conforme necessário)
-  }
+
 </script>
 
 </body>

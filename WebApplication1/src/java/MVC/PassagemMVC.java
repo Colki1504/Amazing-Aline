@@ -11,6 +11,8 @@ package MVC;
 public class PassagemMVC {
     String localSaida,diaSaida,horaSaida,diaChegada,horachegada,localChegada,localEntrada;
 
+
+
     public String getLocalEntrada() {
         return localEntrada;
     }

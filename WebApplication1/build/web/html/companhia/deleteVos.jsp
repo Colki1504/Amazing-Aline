@@ -97,10 +97,10 @@
   <title>Excluir Voo</title>
 </head>
 <body>
-    <form method="post" action="deletar/deletePassagem.jsp">
+    <form method="post" action="deletar/deleteVoos.jsp">
     <div class="container">
       <div class="header">
-        <div>Companhia - Excluir Pacote</div>
+        <div>Companhia - Excluir Voo</div>
       </div>
       <div class="botoes">
         <button class="button" onclick="abrirPagina('inicio.jsp')">Inicial</button>
@@ -108,25 +108,30 @@
         <form>
       <div class="form">
           <div>
-        <label for="localSaida">Id do Pacote:</label>
+        <label for="localSaida">Id do Voo:</label>
 
-        <input type="type" name="id"  value="<%=request.getParameter("id")%>">
+        <input type="type" name="id"  value="<%=request.getParameter("id")%>"  >
         </div>
 
         <div>
-        <label for="localSaida">Local de saída:</label>
-        <input type="type" name="nome" class="overlap-group" value="<%=request.getParameter("localSaida")%>">
+        <label for="localSaida">Local de Saída:</label>
+        <input type="type" name="nome" class="overlap-group" value="<%=request.getParameter("localdeSaida")%>">
         </div>
 
         <div>
-            <label for="horaSaida">Local de chegada:</label>
+            <label for="horaSaida">Duração:</label>
         <input type="type" name="horadeSaida"  
-               value=" <%=request.getParameter("localChegada")%>"> 
+               value="<%=request.getParameter("duraca")%> mim"> 
+        </div>
+
+        <div>
+            <label for="destino">Destino:</label>
+        <input type="type" name=""  value="<%=request.getParameter("destino")%>">
         </div>
 
         <div>
             <label for="valor">Valor:</label>
-        <input type="type" name="id"  value="<%=request.getParameter("valor")%>">
+        <input type="type" name="id"  value="R$: <%=request.getParameter("valor")%>">
         </div>
 
 
