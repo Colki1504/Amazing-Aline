@@ -59,4 +59,4 @@ CREATE TABLE voos ( </br>
 
 Essas instruções SQL criam um banco de dados chamado amazing e quatro tabelas relacionadas a clientes, companhias aéreas, passagens e informações de voos. Certifique-se de que o seu ambiente MySQL esteja configurado corretamente e execute essas instruções no seu banco de dados antes de usar o Amazing Aline.  </br>
 
-**obrigado por ter lida até aqui.**
+**obrigado por ter lido até aqui.**
